@@ -1,0 +1,27 @@
+program number5;
+
+var
+j,i:integer;
+L:array [1..7] of integer;
+Y:array [1..5] of integer;
+prom1,prom2,Z:real;
+begin
+writeln('Массив L: ');
+for i:=1 to 7 do begin
+L[i]:=random(10)+1;
+write(L[i]:3);
+end;   writeln;writeln('Массив Y:');
+for j:=1 to 5 do begin
+Y[j]:=random(10)+1;
+write(Y[j]:3);
+end;
+for i:=1 to 7 do
+prom1:= (prom1 + ((sqr(L[i]))/(L[i]+1)));
+for j:=1 to 5 do
+prom2:=(prom2 + sqr(Y[j])*Y[j]);
+
+Z:=prom1+L[1]*L[7]*prom2;
+writeln;
+write('Значение Z = ',Z:3:4);
+readln;
+end.

@@ -1,0 +1,19 @@
+program number1;
+
+var
+k,i:integer;
+ A:array [1..4] of string;
+
+begin
+for i:=1 to 4 do begin
+write('Введите ',i,'-ю фамилию = ',A[i]);
+readln(A[i]);
+end;
+k:=0;writeln;
+for i:=1 to 4 do
+if ((A[i]='Иванов')or(A[i]='иванов')) then k:=i;
+
+if k>0 then writeln('Фамилия Иванов найдена под номером ',k)
+ else writeln('Фамилия в списке не найдена');
+
+end.
